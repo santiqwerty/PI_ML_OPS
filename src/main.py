@@ -3,6 +3,15 @@ import pandas as pd
 
 app = FastAPI()
 
+import patoolib
+patoolib.extract_archive("../data/processed/genre_playtime.parquet.rar", outdir="../data/processed")
+patoolib.extract_archive("../data/processed/merge.parquet.rar", outdir="../data/processed")
+patoolib.extract_archive("..data/processed/recomendacion_juego.parquet.rar", outdir="../data/processed")
+patoolib.extract_archive("../data/processed/recomendacion_usuario.parquet.rar", outdir="../data/processed")
+patoolib.extract_archive("../data/processed/recommendations.parquet.rar", outdir="../data/processed")
+patoolib.extract_archive("../dataprocessed/reduced_df.parquet.rar", outdir="../data/processed")
+
+
 # Cargar los DataFrames y otras inicializaciones necesarias
 # Asumiendo que los archivos están en la ruta especificada
 genre_playtime_df = pd.read_parquet('../data/processed/genre_playtime.parquet')
