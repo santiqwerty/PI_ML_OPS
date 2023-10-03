@@ -6,13 +6,14 @@ app = FastAPI()
 # Cargar los DataFrames y otras inicializaciones necesarias
 # Asumiendo que los archivos están en la ruta especificada
 genre_playtime_df = pd.read_parquet('../data/processed/genre_playtime.parquet')
+
 recommendations_df = pd.read_parquet('../data/processed/recommendations.parquet')
 game_cosine_sim_df = pd.read_parquet('../data/processed/recomendacion_juego.parquet')
 user_cosine_sim_df = pd.read_parquet('../data/processed/recomendacion_usuario.parquet')
 final_merged_df = pd.read_parquet('../data/processed/merge.parquet') 
 reduced_df = pd.read_parquet('../data/processed/reduced_df.parquet')  
 
-async def play_time_genre(genero: str):
+async def play_time_genre(genero: str):t
     try:
         # Filtrar solo las filas donde el género especificado es 1 (presente)
         genre_df = genre_playtime_df[genre_playtime_df[genero] == 1]      
