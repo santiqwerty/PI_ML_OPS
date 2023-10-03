@@ -1,6 +1,8 @@
+import ast
+
 import demjson3
 import pandas as pd
-import ast
+
 
 def load_and_normalize_user_reviews(file_path):
 

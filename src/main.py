@@ -6,7 +6,6 @@ app = FastAPI()
 # Cargar los DataFrames y otras inicializaciones necesarias
 # Asumiendo que los archivos están en la ruta especificada
 genre_playtime_df = pd.read_parquet('../data/processed/genre_playtime.parquet')
-
 recommendations_df = pd.read_parquet('../data/processed/recommendations.parquet')
 game_cosine_sim_df = pd.read_parquet('../data/processed/recomendacion_juego.parquet')
 user_cosine_sim_df = pd.read_parquet('../data/processed/recomendacion_usuario.parquet')
